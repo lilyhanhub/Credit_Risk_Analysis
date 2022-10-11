@@ -11,9 +11,27 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
 
 ## Results
 There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
-#### I. How many Vine reviews and non-Vine reviews were there? 
-![5a](Resources/5a.png)
-![5d](Resources/5d.png)
+### I. RandomOverSampler
+![RandomOverSampleing](Resources/images/RandomOverSampling.png)
+
+
+### II. SMOTE Oversampling
+![SMOTE](Resources/images/SMOTE.png)
+
+
+### III. ClusterCentroids Undersampling
+![UnderSampling](Resources/images/UnderSampling.png)
+
+
+### IV. SMOTEENN Combination Sampling
+![SMOTEENN](Resources/images/SMOTEENN.png)
+
+### V. Balanced Random Forest Classifier
+![BRFensemble](Resources/images/BRFensemble.png)
+
+### VI. Easy Ensemble Classifier
+![EasyEnsembleClassifier](Resources/images/EasyEnsembleClassifer.png)
+
 
 ## Summary
 There is a summary of the results (2 pt)
