@@ -10,10 +10,10 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
     * EasyEnsembleClassifier algorithm
 
 ## Results
-There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
 ### I. RandomOverSampler
 ![RandomOverSampleing](Resources/images/RandomOverSampling.png)
-
+* The balanced accuracy score is 65%.
+* For high risk loans, the precision is very low with 1%, which means only 1% of the predicted high risk loans are true high risk. The recall is 63% while the F1 score is quite low (0.02). 
 
 ### II. SMOTE Oversampling
 ![SMOTE](Resources/images/SMOTE.png)
@@ -36,3 +36,6 @@ There is a bulleted list that describes the balanced accuracy score and the prec
 ## Summary
 There is a summary of the results (2 pt)
 There is a recommendation on which model to use, or there is no recommendation with a justification
+
+From the confusion matrix results, the precision for the bad loan applications is low, indicating a large number of false positives, which indicates an unreliable positive classification. The recall is also low for the bad loan applications, which is indicative of a large number of false negatives. The F1 score is also low (33).
+In summary, this random forest model is not good at classifying fraudulent loan applications because the model's accuracy, 0.520, and F1 score are low.
