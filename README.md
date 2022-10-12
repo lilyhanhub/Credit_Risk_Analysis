@@ -41,7 +41,7 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
 * For high risk credits, the precision score is 7%, and the recall is 91%, which means 7% of the predicted high risk credits are true high risk and 91% of the high risk credits are identified by this model. The F1 score is improved more at 0.14.
 
 ## Summary
-In summary, the first four models are not good at predicating high risk credit because 1) Their balanced accuracy scores are all below 70%; 2) Their precision scores for high risk credit are very low (1-2%), incidating a large number of false high risk credits; 3) Their recall scores for high risk credit are also low (70% or below), which are indicative of a large number of false low risk credits. 
+In summary, the first four models are not good at predicating high risk credit because (1) Their balanced accuracy scores are all below 70%; (2) Their precision scores for high risk credit are very low (1-2%), incidating a large number of false high risk credits; (3) Their recall scores for high risk credit are also low (70% or below), which are indicative of a large number of false low risk credits. 
 
 However, the two ensemble classifiers are much more effective catching high risk credits in comparison to the previous four models. Particularly, the Easy Ensemble Classifer performs the best with highest balanced accuracy score (92.5%), precision score (7%), recall (91%), and F1 score (0.14).  
 
