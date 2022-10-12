@@ -13,29 +13,36 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
 ### I. RandomOverSampler
 ![RandomOverSampleing](Resources/images/RandomOverSampling.png)
 * The balanced accuracy score is 65%.
-* For high risk loans, the precision is very low with 1%, which means only 1% of the predicted high risk loans are true high risk. The recall is 63% while the F1 score is quite low (0.02). 
+* For high risk credits, the precision score is 1%, and the recall is 63%, which means only 1% of the predicted high risk credits are true high risk and 63% of the high risk credits are identified by this model. The F1 score is also quite low (0.02). 
 
 ### II. SMOTE Oversampling
 ![SMOTE](Resources/images/SMOTE.png)
-
+* The balanced accuracy score is 61.8%.
+* For high risk credits, the precision score is 1%, and the recall is 59%, which means only 1% of the predicted high risk credits are true high risk and 59% of the high risk credits are identified by this model. The F1 score is also quite low (0.02). 
 
 ### III. ClusterCentroids Undersampling
 ![UnderSampling](Resources/images/UnderSampling.png)
-
+* The balanced accuracy score is 51%.
+* For high risk credits, the precision score is 1%, and the recall is 59%, which means only 1% of the predicted high risk credits are true high risk and 59% of the high risk credits are identified by this model. The F1 score is also quite low (0.01).
 
 ### IV. SMOTEENN Combination Sampling
 ![SMOTEENN](Resources/images/SMOTEENN.png)
+* The balanced accuracy score is 63.8%.
+* For high risk credits, the precision score is 1%, and the recall is 70%, which means only 1% of the predicted high risk credits are true high risk and 70% of the high risk credits are identified by this model. The F1 score is also quite low (0.02).
 
 ### V. Balanced Random Forest Classifier
 ![BRFensemble](Resources/images/BRFensemble.png)
+* The balanced accuracy score is 78.8%.
+* For high risk credits, the precision score is 4%, and the recall is 67%, which means 4% of the predicted high risk credits are true high risk and 67% of the high risk credits are identified by this model. The F1 score is slightly improved at 0.07.
 
 ### VI. Easy Ensemble Classifier
 ![EasyEnsembleClassifier](Resources/images/EasyEnsembleClassifer.png)
-
+* The balanced accuracy score is 92.5%.
+* For high risk credits, the precision score is 7%, and the recall is 91%, which means 7% of the predicted high risk credits are true high risk and 91% of the high risk credits are identified by this model. The F1 score is improved more at 0.14.
 
 ## Summary
-There is a summary of the results (2 pt)
-There is a recommendation on which model to use, or there is no recommendation with a justification
+In summary, the first four models are not good at predicating high risk credit because 1) Their balanced accuracy scores are all below 70%; 2) Their precision scores for high risk credit applications are very low (1-2%), incidating a large number of false high risk credits; 3) Their recall scores for high risk credit card applications are also low (70% or below), which are indicative of a large number of false low risk credits. 
 
-From the confusion matrix results, the precision for the bad loan applications is low, indicating a large number of false positives, which indicates an unreliable positive classification. The recall is also low for the bad loan applications, which is indicative of a large number of false negatives. The F1 score is also low (33).
-In summary, this random forest model is not good at classifying fraudulent loan applications because the model's accuracy, 0.520, and F1 score are low.
+However, the two ensemble classifiers are much more effective catching high risk credits in comparison to the previous four models. Particularly, the Easy Ensemble Classifer performs the best with highest balanced accuracy score (92.5%), precision score (7%), recall (91%), and F1 score (0.14).  
+
+Therefore, among the six machine leanring models, the Easy Ensemble Classifier is recommended to predict high risk credit.  
